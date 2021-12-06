@@ -1,0 +1,224 @@
+{
+	"info": {
+		"_postman_id": "17fbf58b-f4c8-4aa7-8a74-a1a8c9945dd2",
+		"name": "New Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "reza",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "2221113344",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass",
+									"type": "text"
+								},
+								{
+									"key": "is_doctor",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "is_patient",
+									"value": "False",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/signup/?name=reza&national_id=2221113344&password=StrongPass&is_doctor=True&is_patient=False",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"signup",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "reza"
+								},
+								{
+									"key": "national_id",
+									"value": "2221113344"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass"
+								},
+								{
+									"key": "is_doctor",
+									"value": "True"
+								},
+								{
+									"key": "is_patient",
+									"value": "False"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 06 Dec 2021 14:03:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.9"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"is_doctor\": true,\n    \"is_patient\": false,\n    \"national_id\": \"2221113344\",\n    \"name\": \"reza\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": null
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "2221113344",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8000/login/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 06 Dec 2021 14:06:01 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.9"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "593"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzODg4NTk2MSwiaWF0IjoxNjM4Nzk5NTYxLCJqdGkiOiJmZmUxYTQ2ZWE1ZmY0ZjVlYjcxMzNmZDljMjlhODM1NiIsInVzZXJfaWQiOjIsIm5hbWUiOiJyZXphIiwibmF0aW9uYWxfaWQiOiIyMjIxMTEzMzQ0In0.VzWkEbi39wW6kKfSoUxHkwk_RNId1tbk0YZ7Z1aENYA\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4Nzk5ODYxLCJpYXQiOjE2Mzg3OTk1NjEsImp0aSI6IjdjNzVkZWViYzYwNTQ3NzRiMzg5ZmUyYmI0MGQ1OTdjIiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQifQ.9N0SL5UhlDE3Hxn49YCIVu4L1R-aEEfsGb_G5ofE7sE\"\n}"
+				}
+			]
+		}
+	]
+}
