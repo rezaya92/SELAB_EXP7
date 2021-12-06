@@ -16,6 +16,7 @@ class UserSerializer(serializers.ModelSerializer):
             password=validated_data['password'],
             is_doctor=validated_data['is_doctor'],
             is_patient=validated_data['is_patient'],
+            name=validated_data['name'],
         )
 
         return user

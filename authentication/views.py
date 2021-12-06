@@ -1,6 +1,8 @@
 from rest_framework import permissions
 from rest_framework.generics import CreateAPIView
-from django.contrib.auth import get_user_model # If used custom user model
+from django.contrib.auth import get_user_model
+from rest_framework_simplejwt.serializers import TokenObtainPairSerializer
+from rest_framework_simplejwt.views import TokenObtainPairView
 
 from .serializers import UserSerializer
 
@@ -12,3 +14,16 @@ class CreateUserView(CreateAPIView):
         permissions.AllowAny
     ]
     serializer_class = UserSerializer
+
+
+class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
+    @classmethod
+    def get_token(cls, user):
+        token = super().get_token(user)
+        token['name'] = user.name
+        token['national_id'] = user.username
+        return token
+
+
+class MyTokenObtainPairView(TokenObtainPairView):
+    serializer_class = MyTokenObtainPairSerializer
