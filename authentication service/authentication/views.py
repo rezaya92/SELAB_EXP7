@@ -22,6 +22,9 @@ class MyTokenObtainPairSerializer(TokenObtainPairSerializer):
         token = super().get_token(user)
         token['name'] = user.name
         token['national_id'] = user.username
+        token['is_doctor'] = user.is_doctor
+        token['is_patient'] = user.is_patient
+        token['is_admin'] = user.is_superuser
         return token
 
 
