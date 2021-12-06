@@ -1,3 +1,8 @@
+from django.contrib.auth.models import AbstractUser
 from django.db import models
 
-# Create your models here.
+
+class User(AbstractUser):
+    name = models.CharField(max_length=64)
+    is_doctor = models.BooleanField()
+    is_patient = models.BooleanField()
