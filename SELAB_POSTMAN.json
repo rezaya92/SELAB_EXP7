@@ -49,14 +49,14 @@
 							]
 						},
 						"url": {
-							"raw": "127.0.0.1:8000/signup/?name=reza&national_id=2221113344&password=StrongPass&is_doctor=True&is_patient=False",
+							"raw": "127.0.0.1:8080/signup/?name=reza&national_id=2221113344&password=StrongPass&is_doctor=True&is_patient=False",
 							"host": [
 								"127",
 								"0",
 								"0",
 								"1"
 							],
-							"port": "8000",
+							"port": "8080",
 							"path": [
 								"signup",
 								""
@@ -160,14 +160,14 @@
 							]
 						},
 						"url": {
-							"raw": "127.0.0.1:8000/login/",
+							"raw": "127.0.0.1:8080/login/",
 							"host": [
 								"127",
 								"0",
 								"0",
 								"1"
 							],
-							"port": "8000",
+							"port": "8080",
 							"path": [
 								"login",
 								""
