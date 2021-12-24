@@ -38,5 +38,20 @@ class Prescription(db.Model):
        }
 
 
+class AddPrescription(Resource):
+    def post(self):
+        req_json = request.json
+        new_prescription = Prescription(doctor_national_id=req_json['doctor_national_id'], patient_national_id=req_json['patient_national_id'], description=req_json['description'])
+        
+        try:
+            db.session.add(new_prescription)
+            db.session.commit()
+            return 'Prescription added successfully', 201
+        except:
+            return 'An error occured while adding prescription.', 500
+       
+
+api.add_resource(AddPrescription, '/prescriptions/add')
+
 if __name__ == "__main__":
     app.run(debug=True, port=9000)
