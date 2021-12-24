@@ -53,6 +53,28 @@ def _proxy(path):
     elif path == "statistics":
         if not jwt_payload["is_admin"]:
             return "Access denied.", 403
+        service_port = 8000
+        resp = requests.request(
+          method=request.method,
+          url=request.url.replace(request.host_url, f'http://127.0.0.1:{service_port}/'),
+          headers={key: value for (key, value) in request.headers if key != 'Host'},
+          data=data,
+          json=req_json,
+          cookies=request.cookies,
+          allow_redirects=False)
+        
+        #TODO
+        # print(resp.content)
+        service_port = 9000
+        resp = requests.request(
+          method=request.method,
+          url=request.url.replace(request.host_url, f'http://127.0.0.1:{service_port}/'),
+          headers={key: value for (key, value) in request.headers if key != 'Host'},
+          data=data,
+          json=req_json,
+          cookies=request.cookies,
+          allow_redirects=False)
+        print(resp.content)
     
     
     resp = requests.request(
