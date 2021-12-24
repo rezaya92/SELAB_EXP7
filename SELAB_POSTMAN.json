@@ -514,8 +514,26 @@
 			"name": "statistics",
 			"request": {
 				"method": "GET",
-				"header": [],
-				"url": null
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwODA3MTA2LCJpYXQiOjE2NDAzNzUxMDYsImp0aSI6ImE2ZGE5NTFjMWMwNTQ0MTQ5YzFlMTc2NjU2NmY4MWU1IiwidXNlcl9pZCI6MiwibmFtZSI6ImFkbWluIiwibmF0aW9uYWxfaWQiOiJhZG1pbiIsImlzX2RvY3RvciI6dHJ1ZSwiaXNfcGF0aWVudCI6dHJ1ZSwiaXNfYWRtaW4iOnRydWV9.1-_gNkvc4l3mHzkNx_MwdbrI83GvExdeEvpZEQcn5l0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8080/statistics",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"statistics"
+					]
+				}
 			},
 			"response": [
 				{
@@ -566,6 +584,55 @@
 					],
 					"cookie": [],
 					"body": "Access denied."
+				},
+				{
+					"name": "statistics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwODA3MTA2LCJpYXQiOjE2NDAzNzUxMDYsImp0aSI6ImE2ZGE5NTFjMWMwNTQ0MTQ5YzFlMTc2NjU2NmY4MWU1IiwidXNlcl9pZCI6MiwibmFtZSI6ImFkbWluIiwibmF0aW9uYWxfaWQiOiJhZG1pbiIsImlzX2RvY3RvciI6dHJ1ZSwiaXNfcGF0aWVudCI6dHJ1ZSwiaXNfYWRtaW4iOnRydWV9.1-_gNkvc4l3mHzkNx_MwdbrI83GvExdeEvpZEQcn5l0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/statistics",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "412"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 20:07:54 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"doctor_statistics\": [\n        {\n            \"count\": 1,\n            \"date\": \"2021-12-06\"\n        },\n        {\n            \"count\": 2,\n            \"date\": \"2021-12-24\"\n        }\n    ],\n    \"prescription_statistics\": [\n        {\n            \"issue date\": \"2021-12-24\",\n            \"prescription_count\": 5\n        }\n    ],\n    \"user_statistics\": [\n        {\n            \"count\": 1,\n            \"date\": \"2021-12-06\"\n        },\n        {\n            \"count\": 2,\n            \"date\": \"2021-12-24\"\n        }\n    ]\n}"
 				}
 			]
 		}
