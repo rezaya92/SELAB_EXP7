@@ -1,0 +1,640 @@
+{
+	"info": {
+		"_postman_id": "9c4fd594-fed3-45fa-bc26-b5666df69bf2",
+		"name": "SELab_Exp7&8",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "reza",
+							"type": "text"
+						},
+						{
+							"key": "national_id",
+							"value": "2221113344",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "StrongPass",
+							"type": "text"
+						},
+						{
+							"key": "is_doctor",
+							"value": "True",
+							"type": "text"
+						},
+						{
+							"key": "is_patient",
+							"value": "False",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/signup/?name=reza&national_id=2221113344&password=StrongPass&is_doctor=True&is_patient=False",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"signup",
+						""
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "reza"
+						},
+						{
+							"key": "national_id",
+							"value": "2221113344"
+						},
+						{
+							"key": "password",
+							"value": "StrongPass"
+						},
+						{
+							"key": "is_doctor",
+							"value": "True"
+						},
+						{
+							"key": "is_patient",
+							"value": "False"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "signup",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "reza",
+									"type": "text"
+								},
+								{
+									"key": "national_id",
+									"value": "2221113344",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass",
+									"type": "text"
+								},
+								{
+									"key": "is_doctor",
+									"value": "True",
+									"type": "text"
+								},
+								{
+									"key": "is_patient",
+									"value": "False",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/signup/?name=reza&national_id=2221113344&password=StrongPass&is_doctor=True&is_patient=False",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"signup",
+								""
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "reza"
+								},
+								{
+									"key": "national_id",
+									"value": "2221113344"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass"
+								},
+								{
+									"key": "is_doctor",
+									"value": "True"
+								},
+								{
+									"key": "is_patient",
+									"value": "False"
+								}
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 06 Dec 2021 14:03:16 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.9"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "85"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 2,\n    \"is_doctor\": true,\n    \"is_patient\": false,\n    \"national_id\": \"2221113344\",\n    \"name\": \"reza\"\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "username",
+							"value": "2221113344",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "StrongPass",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/login/",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"login",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "username",
+									"value": "2221113344",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "StrongPass",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/login/",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"login",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 06 Dec 2021 14:58:21 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.9.9"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Length",
+							"value": "734"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"refresh\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTYzODg4OTEwMSwiaWF0IjoxNjM4ODAyNzAxLCJqdGkiOiIzNTg4YmZmMDkwODk0ZTU4YmFiZjYzY2RlNzQ3ZDZlYyIsInVzZXJfaWQiOjIsIm5hbWUiOiJyZXphIiwibmF0aW9uYWxfaWQiOiIyMjIxMTEzMzQ0IiwiaXNfZG9jdG9yIjp0cnVlLCJpc19wYXRpZW50IjpmYWxzZSwiaXNfYWRtaW4iOmZhbHNlfQ.cFTnKKzlBU1Xzds1AE6IYBUAWsoVO5M1VoaF_Cu7D70\",\n    \"access\": \"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjM4ODAzMDAxLCJpYXQiOjE2Mzg4MDI3MDEsImp0aSI6ImY0NzFmYmMwY2ExYzQ2M2M4YzAwZTM0YjE4YjIwY2ZiIiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.F_zr6Y1RgSZ7rELrlLyy8qtETIS3mXD_ntt4fLRL7Ic\"\n}"
+				}
+			]
+		},
+		{
+			"name": "View Prescriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMzY1Mjk1LCJpYXQiOjE2NDAzNjQ5OTUsImp0aSI6IjljYjMzOTgxYmJkZTQxOWU4NGYyYmIzYzY4MDdlMWY5IiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.XoLfSn3wQ85WHdEZmJSnTiecJZVNsf9iLEOIwc8o5JY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/prescriptions/view",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"prescriptions",
+						"view"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Prescriptions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMzY1Mjk1LCJpYXQiOjE2NDAzNjQ5OTUsImp0aSI6IjljYjMzOTgxYmJkZTQxOWU4NGYyYmIzYzY4MDdlMWY5IiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.XoLfSn3wQ85WHdEZmJSnTiecJZVNsf9iLEOIwc8o5JY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/prescriptions/view",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"prescriptions",
+								"view"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 17:41:03 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "462"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"prescriptions\": [\n        {\n            \"description\": \"Adult Cold\",\n            \"doctor_national_id\": 2221113344,\n            \"id\": 4,\n            \"issued_at\": [\n                \"2021-12-24\",\n                \"17:20:00\"\n            ],\n            \"patient_national_id\": 777888999\n        },\n        {\n            \"description\": \"ketozol\",\n            \"doctor_national_id\": 2221113344,\n            \"id\": 5,\n            \"issued_at\": [\n                \"2021-12-24\",\n                \"17:40:54\"\n            ],\n            \"patient_national_id\": 777000000\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Add Prescription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMzY1Mjk1LCJpYXQiOjE2NDAzNjQ5OTUsImp0aSI6IjljYjMzOTgxYmJkZTQxOWU4NGYyYmIzYzY4MDdlMWY5IiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.XoLfSn3wQ85WHdEZmJSnTiecJZVNsf9iLEOIwc8o5JY",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"patient_national_id\": 777888999,\r\n    \"description\": \"Adult Cold\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:8080/prescriptions/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"prescriptions",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Prescription",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMzY1Mjk1LCJpYXQiOjE2NDAzNjQ5OTUsImp0aSI6IjljYjMzOTgxYmJkZTQxOWU4NGYyYmIzYzY4MDdlMWY5IiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.XoLfSn3wQ85WHdEZmJSnTiecJZVNsf9iLEOIwc8o5JY",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"patient_national_id\": 777000000,\r\n    \"description\": \"ketozol\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:8080/prescriptions/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"prescriptions",
+								"add"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 17:40:54 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						}
+					],
+					"cookie": [],
+					"body": "\"Prescription added successfully\""
+				}
+			]
+		},
+		{
+			"name": "statistics",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwODA3MTA2LCJpYXQiOjE2NDAzNzUxMDYsImp0aSI6ImE2ZGE5NTFjMWMwNTQ0MTQ5YzFlMTc2NjU2NmY4MWU1IiwidXNlcl9pZCI6MiwibmFtZSI6ImFkbWluIiwibmF0aW9uYWxfaWQiOiJhZG1pbiIsImlzX2RvY3RvciI6dHJ1ZSwiaXNfcGF0aWVudCI6dHJ1ZSwiaXNfYWRtaW4iOnRydWV9.1-_gNkvc4l3mHzkNx_MwdbrI83GvExdeEvpZEQcn5l0",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "127.0.0.1:8080/statistics",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"statistics"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "statistics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwMzY1Mjk1LCJpYXQiOjE2NDAzNjQ5OTUsImp0aSI6IjljYjMzOTgxYmJkZTQxOWU4NGYyYmIzYzY4MDdlMWY5IiwidXNlcl9pZCI6MiwibmFtZSI6InJlemEiLCJuYXRpb25hbF9pZCI6IjIyMjExMTMzNDQiLCJpc19kb2N0b3IiOnRydWUsImlzX3BhdGllbnQiOmZhbHNlLCJpc19hZG1pbiI6ZmFsc2V9.XoLfSn3wQ85WHdEZmJSnTiecJZVNsf9iLEOIwc8o5JY",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/statistics",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"status": "FORBIDDEN",
+					"code": 403,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "14"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 17:48:00 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "Access denied."
+				},
+				{
+					"name": "statistics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjQwODA3MTA2LCJpYXQiOjE2NDAzNzUxMDYsImp0aSI6ImE2ZGE5NTFjMWMwNTQ0MTQ5YzFlMTc2NjU2NmY4MWU1IiwidXNlcl9pZCI6MiwibmFtZSI6ImFkbWluIiwibmF0aW9uYWxfaWQiOiJhZG1pbiIsImlzX2RvY3RvciI6dHJ1ZSwiaXNfcGF0aWVudCI6dHJ1ZSwiaXNfYWRtaW4iOnRydWV9.1-_gNkvc4l3mHzkNx_MwdbrI83GvExdeEvpZEQcn5l0",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "127.0.0.1:8080/statistics",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8080",
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "412"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 20:07:54 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"doctor_statistics\": [\n        {\n            \"count\": 1,\n            \"date\": \"2021-12-06\"\n        },\n        {\n            \"count\": 2,\n            \"date\": \"2021-12-24\"\n        }\n    ],\n    \"prescription_statistics\": [\n        {\n            \"issue date\": \"2021-12-24\",\n            \"prescription_count\": 5\n        }\n    ],\n    \"user_statistics\": [\n        {\n            \"count\": 1,\n            \"date\": \"2021-12-06\"\n        },\n        {\n            \"count\": 2,\n            \"date\": \"2021-12-24\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
