@@ -67,8 +67,23 @@ class ViewPrescription(Resource):
         return jsonify(prescriptions=[i.serialize for i in query_result.all()])
 
 
+def serialize_statistic_data(row):
+    return {
+        'issue date': dump_datetime(row.issued_at)[0],
+        'prescription_count': row.prescription_count
+    }
+
+
+class Statistics(Resource):
+    def get(self):
+        req_json = request.json
+        query = db.session.query(Prescription.issued_at, func.count(Prescription.id).label('prescription_count')).group_by(func.date(Prescription.issued_at))
+        return jsonify(prescription_statistics=[serialize_statistic_data(i) for i in query.all()])
+
+
 api.add_resource(AddPrescription, '/prescriptions/add')
 api.add_resource(ViewPrescription, '/prescriptions/view')
+api.add_resource(Statistics, '/statistics')
 
 if __name__ == "__main__":
     app.run(debug=True, port=9000)
