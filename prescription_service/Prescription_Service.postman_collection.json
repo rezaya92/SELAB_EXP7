@@ -1,0 +1,247 @@
+{
+	"info": {
+		"_postman_id": "0b3470a2-225d-44d7-b3cb-cd7699f9bc88",
+		"name": "SELab_Exp7&8_Prescription_Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Add Prescription",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"doctor_national_id\": 123123123,\r\n    \"patient_national_id\": 111222334,\r\n    \"description\": \"diabetes tablets\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:9000/prescriptions/add",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"prescriptions",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Add Prescription",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"doctor_national_id\": 123123123,\r\n    \"patient_national_id\": 111222334,\r\n    \"description\": \"diabetes tablets\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9000/prescriptions/add",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"prescriptions",
+								"add"
+							]
+						}
+					},
+					"status": "CREATED",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "34"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 12:09:39 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "\"Prescription added successfully\""
+				}
+			]
+		},
+		{
+			"name": "View Prescriptions",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"is_doctor\": 1,\r\n    \"is_patient\": 0,\r\n    \"is_admin\": 0,\r\n    \"national_id\": 123123123\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "127.0.0.1:9000/prescriptions/view",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"prescriptions",
+						"view"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "View Prescriptions",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"is_doctor\": 1,\r\n    \"is_patient\": 0,\r\n    \"is_admin\": 0,\r\n    \"national_id\": 123123123\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "127.0.0.1:9000/prescriptions/view",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"prescriptions",
+								"view"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "475"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 12:53:13 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"prescriptions\": [\n        {\n            \"description\": \"diabetes tablets\",\n            \"doctor_national_id\": 123123123,\n            \"id\": 1,\n            \"issued_at\": [\n                \"2021-12-24\",\n                \"07:06:58\"\n            ],\n            \"patient_national_id\": 111222333\n        },\n        {\n            \"description\": \"diabetes tablets\",\n            \"doctor_national_id\": 123123123,\n            \"id\": 2,\n            \"issued_at\": [\n                \"2021-12-24\",\n                \"12:09:39\"\n            ],\n            \"patient_national_id\": 111222334\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "prescription Statistics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "127.0.0.1:9000/statistics",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "9000",
+					"path": [
+						"statistics"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "prescription Statistics",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "127.0.0.1:9000/statistics",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "9000",
+							"path": [
+								"statistics"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "116"
+						},
+						{
+							"key": "Server",
+							"value": "Werkzeug/2.0.2 Python/3.9.5"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 24 Dec 2021 12:46:42 GMT"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"prescription_statistics\": [\n        {\n            \"issue date\": \"2021-12-24\",\n            \"prescription_count\": 2\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
