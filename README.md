@@ -1,21 +1,33 @@
-# SELAB EXP 6
+# SELAB EXP 7&8
 
-gateway (port 8080):
+## gateway (port 8080):
 ```
 pip install -r requirements.txt
 python server.py
 ```
 
-authentication service (port 8000):
+## authentication service (port 8000):
 ```
 pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
 
-profile service (port 9000):
+## profile service (port 9000):
 
 ```
 pip install -r requirements.txt
-# todo: complete this
+```
+
+to create db do:
+```
+$$ python
+from prescription import *
+db.create_all()
+exit()
+```
+
+then just:
+```
+python prescription.py
 ```
