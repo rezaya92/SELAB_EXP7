@@ -60,11 +60,14 @@ def _proxy(path):
           headers={key: value for (key, value) in request.headers if key != 'Host'},
           data=data,
           json=req_json,
-          cookies=request.cookies,
-          allow_redirects=False)
+          cookies=request.cookies)
         
+        user_stats = byte2json(resp.content)
         #TODO
-        print(resp.content)
+        # print(user_stats)
+        # print(resp.text)
+        # print(resp.json())
+        # print(resp.raw)
         service_port = "9000"
         resp = requests.request(
           method=request.method,
@@ -74,7 +77,9 @@ def _proxy(path):
           json=req_json,
           cookies=request.cookies,
           allow_redirects=False)
-        print(resp.content)
+        prescription_stats = byte2json(resp.content)
+        user_stats.update(prescription_stats)
+        return user_stats
     
     
     resp = requests.request(
@@ -86,6 +91,7 @@ def _proxy(path):
       cookies=request.cookies,
       allow_redirects=False)
 
+    # print(resp.content)
     
     excluded_headers = ['content-encoding', 'content-length', 'transfer-encoding', 'connection']
     headers = [(name, value) for (name, value) in resp.raw.headers.items()
