@@ -51,7 +51,24 @@ class AddPrescription(Resource):
             return 'An error occured while adding prescription.', 500
        
 
+class ViewPrescription(Resource):
+    def get(self):
+        req_json = request.json
+        if req_json['is_doctor'] and req_json['is_patient']:
+            query_result = Prescription.query.filter((Prescription.doctor_national_id == req_json['national_id']) | (Prescription.patient_national_id == req_json['national_id']))
+        elif req_json['is_doctor']:
+            query_result = Prescription.query.filter_by(doctor_national_id=req_json['national_id'])
+        elif req_json['is_patient']:
+            query_result = Prescription.query.filter_by(patient_national_id=req_json['national_id'])
+        elif req_json['is_admin']:
+            query_result = Prescription.query
+        else:
+            return 'Bad request: User has no role.', 400
+        return jsonify(prescriptions=[i.serialize for i in query_result.all()])
+
+
 api.add_resource(AddPrescription, '/prescriptions/add')
+api.add_resource(ViewPrescription, '/prescriptions/view')
 
 if __name__ == "__main__":
     app.run(debug=True, port=9000)
